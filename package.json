@@ -1,8 +1,9 @@
 {
   "name": "first_lesson",
-  "main": "src/index.ts",
+  "main": "src/baseSetup.ts",
   "scripts": {
-    "start": "node -r ts-node/register --env-file=.env src/index.ts"
+    "start": "node -r ts-node/register --env-file=.env src/${npm_config_file}.ts",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
@@ -10,6 +11,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   }
